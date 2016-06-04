@@ -6,8 +6,25 @@
 # 		Submarine - 	3
 # 		Destroyer - 	2
 
-# Advanced rules:
-# 	Salvo - Fire 5 at a time, if a ship has beensunk, you get 1 less shot
+# Quick start
+# 	Human player starts guessing and computer does not hit back
+
+# Classic Version
+# 	Human places ships, then human and computer take turns firing
+
+# Salvo
+# 	Fire 5 at a time, if a ship has been sunk, you get 1 less shot
+
+# Easy mode
+# 	Computer guesses spots at random and does not remember where it has hit
+
+# Normal mode
+
+require 'pry'
+
+
+def welcome
+end
 
 def board
 	@x = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
@@ -27,4 +44,35 @@ def board
 	puts @board[90..99].join(" ")
 end
 
-puts board
+def hit
+end
+
+def miss
+end
+
+def player_shot
+end
+
+def comp_shot
+end
+
+
+
+
+
+
+def destroy
+	puts "\e[31m You sunk my battleship!\e[0m"
+	puts "\e[31m _~-~-~-~-~_\e[0m"
+	puts "\e[31m/           \\\e[0m"
+	puts "\e[31m(            )\e[0m"
+	puts "\e[31m -          -\e[0m"
+	puts "\e[31m  (        )\e[0m"
+	puts " \e[31m   |    |\e[0m"
+	puts "\e[31m      /X\\\e[0m"
+	puts "\e[31mc----/   \\------>\e[0m"
+	sleep(3)
+end
+
+board
+destroy
